@@ -1,0 +1,426 @@
+{
+    "profesores": [
+        {
+            "id": 1,
+            "nombre": "Ana Pérez",
+            "categoria": "Frontend",
+            "descripcion": "Especialista en HTML, CSS y frameworks modernos como React.",
+            "numero_estudiantes": 1200,
+            "calificacion": 4.8,
+            "cantidad_cursos": 2,
+            "foto": "https://api.dicebear.com/7.x/avataaars/png?seed=Ana%20Perez&radius=50"
+        },
+        {
+            "id": 2,
+            "nombre": "Luis Gómez",
+            "categoria": "Backend",
+            "descripcion": "Ingeniero en software con experiencia en Node.js y bases de datos.",
+            "numero_estudiantes": 980,
+            "calificacion": 4.6,
+            "cantidad_cursos": 2,
+            "foto": "https://api.dicebear.com/7.x/avataaars/png?seed=Luis%20Gomez&radius=50"
+        },
+        {
+            "id": 3,
+            "nombre": "María Torres",
+            "categoria": "Bases de Datos",
+            "descripcion": "Experta en diseño, modelado y optimización de bases de datos SQL y NoSQL.",
+            "numero_estudiantes": 750,
+            "calificacion": 4.7,
+            "cantidad_cursos": 2,
+            "foto": "https://api.dicebear.com/7.x/avataaars/png?seed=Maria%20Torres&radius=50"
+        },
+        {
+            "id": 4,
+            "nombre": "Carlos López",
+            "categoria": "JavaScript",
+            "descripcion": "Desarrollador fullstack enfocado en aplicaciones con JavaScript moderno.",
+            "numero_estudiantes": 1500,
+            "calificacion": 4.9,
+            "cantidad_cursos": 2,
+            "foto": "https://api.dicebear.com/7.x/avataaars/png?seed=Carlos%20Lopez&radius=50"
+        },
+        {
+            "id": 5,
+            "nombre": "Lucía Martínez",
+            "categoria": "Python",
+            "descripcion": "Especialista en Python para backend, automatización y análisis de datos.",
+            "numero_estudiantes": 890,
+            "calificacion": 4.5,
+            "cantidad_cursos": 1,
+            "foto": "https://api.dicebear.com/7.x/avataaars/png?seed=Lucia%20Martinez&radius=50"
+        },
+        {
+            "id": 6,
+            "nombre": "Andrés Castillo",
+            "categoria": "DevOps",
+            "descripcion": "Ingeniero DevOps con experiencia en CI/CD, Docker y Kubernetes.",
+            "numero_estudiantes": 620,
+            "calificacion": 4.4,
+            "cantidad_cursos": 1,
+            "foto": "https://api.dicebear.com/7.x/avataaars/png?seed=Andres%20Castillo&radius=50"
+        },
+        {
+            "id": 7,
+            "nombre": "Paula Hernández",
+            "categoria": "Seguridad Informática",
+            "descripcion": "Especialista en ciberseguridad y protección de aplicaciones web.",
+            "numero_estudiantes": 430,
+            "calificacion": 4.3,
+            "cantidad_cursos": 1,
+            "foto": "https://api.dicebear.com/7.x/avataaars/png?seed=Paula%20Hernandez&radius=50"
+        },
+        {
+            "id": 8,
+            "nombre": "Diego Ramírez",
+            "categoria": "Frontend",
+            "descripcion": "Experto en frameworks modernos como Vue.js y Angular.",
+            "numero_estudiantes": 770,
+            "calificacion": 4.6,
+            "cantidad_cursos": 2,
+            "foto": "https://api.dicebear.com/7.x/avataaars/png?seed=Diego%20Ramirez&radius=50"
+        },
+        {
+            "id": 9,
+            "nombre": "Sofía Morales",
+            "categoria": "Móvil",
+            "descripcion": "Desarrolladora especializada en aplicaciones móviles con React Native y Flutter.",
+            "numero_estudiantes": 500,
+            "calificacion": 4.4,
+            "cantidad_cursos": 1,
+            "foto": "https://api.dicebear.com/7.x/avataaars/png?seed=Sofia%20Morales&radius=50"
+        },
+        {
+            "id": 10,
+            "nombre": "Fernando Díaz",
+            "categoria": "Arquitectura de Software",
+            "descripcion": "Arquitecto de software con experiencia en microservicios y sistemas distribuidos.",
+            "numero_estudiantes": 650,
+            "calificacion": 4.7,
+            "cantidad_cursos": 1,
+            "foto": "https://api.dicebear.com/7.x/avataaars/png?seed=Fernando%20Diaz&radius=50"
+        },
+        {
+            "id": 11,
+            "nombre": "Gabriela Mendoza",
+            "categoria": "IA",
+            "descripcion": "Especialista en Machine Learning y Deep Learning.",
+            "numero_estudiantes": 710,
+            "calificacion": 4.8,
+            "cantidad_cursos": 2,
+            "foto": "https://api.dicebear.com/7.x/avataaars/png?seed=GabrielaMendoza&radius=50"
+        },
+        {
+            "id": 12,
+            "nombre": "Ricardo Aguilar",
+            "categoria": "Backend",
+            "descripcion": "Experto en desarrollo de sistemas con Java y Spring Boot.",
+            "numero_estudiantes": 860,
+            "calificacion": 4.6,
+            "cantidad_cursos": 2,
+            "foto": "https://api.dicebear.com/7.x/avataaars/png?seed=RicardoAguilar&radius=50"
+        },
+        {
+            "id": 13,
+            "nombre": "Isabel Cruz",
+            "categoria": "Data Science",
+            "descripcion": "Analista de datos con experiencia en Python y R.",
+            "numero_estudiantes": 940,
+            "calificacion": 4.7,
+            "cantidad_cursos": 3,
+            "foto": "https://api.dicebear.com/7.x/avataaars/png?seed=IsabelCruz&radius=50"
+        },
+        {
+            "id": 14,
+            "nombre": "Diego Herrera",
+            "categoria": "Frontend",
+            "descripcion": "Especialista en UX/UI y frameworks como Svelte.",
+            "numero_estudiantes": 520,
+            "calificacion": 4.5,
+            "cantidad_cursos": 1,
+            "foto": "https://api.dicebear.com/7.x/avataaars/png?seed=DiegoHerrera&radius=50"
+        },
+        {
+            "id": 15,
+            "nombre": "Patricia Campos",
+            "categoria": "Cloud",
+            "descripcion": "Ingeniera en computación en la nube con AWS y Azure.",
+            "numero_estudiantes": 1100,
+            "calificacion": 4.9,
+            "cantidad_cursos": 2,
+            "foto": "https://api.dicebear.com/7.x/avataaars/png?seed=PatriciaCampos&radius=50"
+        },
+        {
+            "id": 16,
+            "nombre": "Héctor Silva",
+            "categoria": "Seguridad Informática",
+            "descripcion": "Especialista en hacking ético y pruebas de penetración.",
+            "numero_estudiantes": 670,
+            "calificacion": 4.4,
+            "cantidad_cursos": 1,
+            "foto": "https://api.dicebear.com/7.x/avataaars/png?seed=HectorSilva&radius=50"
+        },
+        {
+            "id": 17,
+            "nombre": "Valeria Chávez",
+            "categoria": "Móvil",
+            "descripcion": "Experta en desarrollo de apps Android e iOS.",
+            "numero_estudiantes": 720,
+            "calificacion": 4.6,
+            "cantidad_cursos": 2,
+            "foto": "https://api.dicebear.com/7.x/avataaars/png?seed=ValeriaChavez&radius=50"
+        },
+        {
+            "id": 18,
+            "nombre": "Manuel Flores",
+            "categoria": "Base de Datos",
+            "descripcion": "Especialista en optimización de bases de datos Oracle y PostgreSQL.",
+            "numero_estudiantes": 580,
+            "calificacion": 4.5,
+            "cantidad_cursos": 2,
+            "foto": "https://api.dicebear.com/7.x/avataaars/png?seed=ManuelFlores&radius=50"
+        },
+        {
+            "id": 19,
+            "nombre": "Santiago Suárez",
+            "categoria": "DevOps",
+            "descripcion": "Experto en integración continua y automatización de despliegues.",
+            "numero_estudiantes": 630,
+            "calificacion": 4.7,
+            "cantidad_cursos": 1,
+            "foto": "https://api.dicebear.com/7.x/avataaars/png?seed=SantiagoSuarez&radius=50"
+        },
+        {
+            "id": 20,
+            "nombre": "Marta Ríos",
+            "categoria": "Arquitectura de Software",
+            "descripcion": "Arquitecta de software con experiencia en sistemas empresariales.",
+            "numero_estudiantes": 800,
+            "calificacion": 4.8,
+            "cantidad_cursos": 2,
+            "foto": "https://api.dicebear.com/7.x/avataaars/png?seed=MartaRios&radius=50"
+        }
+    ],
+    "cursos": [
+        {
+            "id": 101,
+            "nombre": "HTML y CSS desde cero",
+            "descripcion": "Aprende a construir páginas web modernas con HTML5 y CSS3.",
+            "nivel": "Principiante",
+            "categoria": "Frontend",
+            "precio": 29.99,
+            "duracion": "15 horas",
+            "profesor_id": 1,
+            "foto": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+        },
+        {
+            "id": 102,
+            "nombre": "React para principiantes",
+            "descripcion": "Construye aplicaciones interactivas con React paso a paso.",
+            "nivel": "Intermedio",
+            "categoria": "Frontend",
+            "precio": 59.99,
+            "duracion": "25 horas",
+            "profesor_id": 1,
+            "foto": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+        },
+        {
+            "id": 103,
+            "nombre": "Node.js desde cero",
+            "descripcion": "Crea servidores y APIs con Node.js y Express.",
+            "nivel": "Principiante",
+            "categoria": "Backend",
+            "precio": 49.99,
+            "duracion": "20 horas",
+            "profesor_id": 2,
+            "foto": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+        },
+        {
+            "id": 104,
+            "nombre": "APIs REST con Node.js",
+            "descripcion": "Aprende a construir y documentar APIs RESTful.",
+            "nivel": "Intermedio",
+            "categoria": "Backend",
+            "precio": 69.99,
+            "duracion": "30 horas",
+            "profesor_id": 2,
+            "foto": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg"
+        },
+        {
+            "id": 105,
+            "nombre": "SQL para principiantes",
+            "descripcion": "Domina las bases del lenguaje SQL para consultar bases de datos.",
+            "nivel": "Principiante",
+            "categoria": "Bases de Datos",
+            "precio": 34.99,
+            "duracion": "18 horas",
+            "profesor_id": 3,
+            "foto": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
+        },
+        {
+            "id": 106,
+            "nombre": "MongoDB y NoSQL",
+            "descripcion": "Aprende a trabajar con bases de datos NoSQL en proyectos reales.",
+            "nivel": "Intermedio",
+            "categoria": "Bases de Datos",
+            "precio": 54.99,
+            "duracion": "22 horas",
+            "profesor_id": 3,
+            "foto": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
+        },
+        {
+            "id": 107,
+            "nombre": "JavaScript moderno (ES6+)",
+            "descripcion": "Conoce las características más importantes de JavaScript moderno.",
+            "nivel": "Principiante",
+            "categoria": "JavaScript",
+            "precio": 39.99,
+            "duracion": "20 horas",
+            "profesor_id": 4,
+            "foto": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+        },
+        {
+            "id": 108,
+            "nombre": "Fullstack con JavaScript",
+            "descripcion": "Desarrolla aplicaciones completas con Node.js y React.",
+            "nivel": "Avanzado",
+            "categoria": "JavaScript",
+            "precio": 79.99,
+            "duracion": "40 horas",
+            "profesor_id": 4,
+            "foto": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+        },
+        {
+            "id": 109,
+            "nombre": "Python para principiantes",
+            "descripcion": "Aprende Python desde cero con ejercicios prácticos.",
+            "nivel": "Principiante",
+            "categoria": "Backend",
+            "precio": 44.99,
+            "duracion": "22 horas",
+            "profesor_id": 5,
+            "foto": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+        },
+        {
+            "id": 110,
+            "nombre": "DevOps con Docker",
+            "descripcion": "Domina la creación y despliegue de contenedores con Docker.",
+            "nivel": "Intermedio",
+            "categoria": "DevOps",
+            "precio": 64.99,
+            "duracion": "28 horas",
+            "profesor_id": 6,
+            "foto": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
+        },
+        {
+            "id": 111,
+            "nombre": "Fundamentos de Ciberseguridad",
+            "descripcion": "Aprende buenas prácticas para proteger aplicaciones web.",
+            "nivel": "Principiante",
+            "categoria": "Seguridad Informática",
+            "precio": 49.99,
+            "duracion": "20 horas",
+            "profesor_id": 7,
+            "foto": "https://cdn.simpleicons.org/owasp"
+        },
+        {
+            "id": 112,
+            "nombre": "Vue.js desde cero",
+            "descripcion": "Crea aplicaciones dinámicas con Vue.js.",
+            "nivel": "Principiante",
+            "categoria": "Frontend",
+            "precio": 39.99,
+            "duracion": "18 horas",
+            "profesor_id": 8,
+            "foto": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg"
+        },
+        {
+            "id": 113,
+            "nombre": "Angular avanzado",
+            "descripcion": "Construye aplicaciones empresariales con Angular.",
+            "nivel": "Avanzado",
+            "categoria": "Frontend",
+            "precio": 79.99,
+            "duracion": "35 horas",
+            "profesor_id": 8,
+            "foto": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg"
+        },
+        {
+            "id": 114,
+            "nombre": "Aplicaciones móviles con React Native",
+            "descripcion": "Desarrolla apps móviles multiplataforma.",
+            "nivel": "Intermedio",
+            "categoria": "Móvil",
+            "precio": 69.99,
+            "duracion": "30 horas",
+            "profesor_id": 9,
+            "foto": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+        },
+        {
+            "id": 115,
+            "nombre": "Arquitectura de microservicios",
+            "descripcion": "Aprende a diseñar sistemas distribuidos y escalables.",
+            "nivel": "Avanzado",
+            "categoria": "Arquitectura de Software",
+            "precio": 89.99,
+            "duracion": "40 horas",
+            "profesor_id": 10,
+            "foto": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg"
+        },
+        {
+            "id": 116,
+            "nombre": "Machine Learning con Python",
+            "descripcion": "Introducción a modelos supervisados y no supervisados.",
+            "nivel": "Intermedio",
+            "categoria": "IA",
+            "precio": 79.99,
+            "duracion": "35 horas",
+            "profesor_id": 11,
+            "foto": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+        },
+        {
+            "id": 117,
+            "nombre": "Spring Boot avanzado",
+            "descripcion": "Crea aplicaciones empresariales con Spring Boot y Microservicios.",
+            "nivel": "Avanzado",
+            "categoria": "Backend",
+            "precio": 89.99,
+            "duracion": "40 horas",
+            "profesor_id": 12,
+            "foto": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
+        },
+        {
+            "id": 118,
+            "nombre": "Análisis de Datos con R",
+            "descripcion": "Domina la visualización y análisis estadístico con R.",
+            "nivel": "Intermedio",
+            "categoria": "Data Science",
+            "precio": 74.99,
+            "duracion": "32 horas",
+            "profesor_id": 13,
+            "foto": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/r/r-original.svg"
+        },
+        {
+            "id": 119,
+            "nombre": "Svelte desde cero",
+            "descripcion": "Aprende a construir aplicaciones modernas con Svelte.",
+            "nivel": "Principiante",
+            "categoria": "Frontend",
+            "precio": 39.99,
+            "duracion": "18 horas",
+            "profesor_id": 14,
+            "foto": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/svelte/svelte-original.svg"
+        },
+        {
+            "id": 120,
+            "nombre": "AWS para desarrolladores",
+            "descripcion": "Domina los servicios esenciales de AWS.",
+            "nivel": "Intermedio",
+            "categoria": "Cloud",
+            "precio": 84.99,
+            "duracion": "28 horas",
+            "profesor_id": 15,
+            "foto": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg"
+        }
+    ]
+}
