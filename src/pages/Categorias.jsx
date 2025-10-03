@@ -1,10 +1,146 @@
-const Categorias = () => {
-  return (
-    // poner h6 con estilo de font-size 10rem , margin arriba y abajo 5rem
-    <p style={{ fontSize: "5rem", marginTop: "5rem", marginBottom: "5rem" }}>
-      Categorias
-    </p>
-  );
-};
+import { useState } from 'react';
 
-export default Categorias;
+import { useAppContext } from '../context/AppContext';
+import Card from '../components/ui/Card';
+import SearchBar from '../components/ui/SearchBar';
+import Pagination from '../components/ui/Pagination';
+import Breadcrumbs from '../components/layout/Breadcrumbs';
+import { Link, useParams } from 'react-router';
+
+export default function Categorias() {
+  const { id } = useParams();
+  const { categorias, getCursosByCategoria } = useAppContext();
+  const [searchTerm, setSearchTerm] = useState('');
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 10;
+
+  // Si hay ID, mostrar cursos de esa categoría
+  if (id) {
+    const categoria = categorias.find(cat => cat.id === parseInt(id));
+    const cursos = getCursosByCategoria(id);
+
+    // Filtrar cursos
+    const filteredCursos = cursos.filter(curso =>
+      curso.titulo.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      curso.descripcion.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+
+    // Paginación
+    const totalPages = Math.ceil(filteredCursos.length / itemsPerPage);
+    const startIndex = (currentPage - 1) * itemsPerPage;
+    const currentCursos = filteredCursos.slice(startIndex, startIndex + itemsPerPage);
+
+    return (
+      <section className="section">
+        <div className="container">
+          <Breadcrumbs items={[
+            { label: 'Categorías', path: '/categorias' },
+            { label: categoria?.nombre || 'Categoría' }
+          ]} />
+
+          <div className="t-align-center" style={{ marginBottom: 'calc(var(--size) * 8)' }}>
+            <span style={{ fontSize: '4rem' }}>{categoria?.icono}</span>
+            <h1 className="title--sm" style={{ margin: 'calc(var(--size) * 2) 0' }}>
+              {categoria?.nombre}
+            </h1>
+            <p className="text c-secondary-text">{categoria?.descripcion}</p>
+          </div>
+
+          {/* Buscador */}
+          <div style={{ marginBottom: 'calc(var(--size) * 8)' }}>
+            <SearchBar 
+              value={searchTerm}
+              onChange={setSearchTerm}
+              placeholder="Buscar cursos en esta categoría..."
+            />
+          </div>
+
+          {/* Cursos */}
+          {currentCursos.length > 0 ? (
+            <>
+              <div className="g-layout g-layout--auto-fit-columns g-8" style={{ marginBottom: 'calc(var(--size) * 8)' }}>
+                {currentCursos.map(curso => (
+                  <Card key={curso.id} curso={curso} />
+                ))}
+              </div>
+
+              {totalPages > 1 && (
+                <Pagination 
+                  currentPage={currentPage}
+                  totalPages={totalPages}
+                  onPageChange={setCurrentPage}
+                />
+              )}
+            </>
+          ) : (
+            <div className="t-align-center" style={{ padding: 'calc(var(--size) * 16) 0' }}>
+              <p className="text--lg c-secondary-text">
+                No se encontraron cursos en esta categoría
+              </p>
+            </div>
+          )}
+        </div>
+      </section>
+    );
+  }
+
+  // Vista principal de categorías
+  const filteredCategorias = categorias.filter(categoria =>
+    categoria.nombre.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    categoria.descripcion.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
+  return (
+    <section className="section">
+      <div className="container">
+        <h1 className="title t-align-center" style={{ marginBottom: 'calc(var(--size) * 4)' }}>
+          🗂️ Todas las Categorías
+        </h1>
+        <p className="text--lg c-secondary-text t-align-center" style={{ marginBottom: 'calc(var(--size) * 8)' }}>
+          Explora cursos organizados por temas
+        </p>
+
+        {/* Buscador */}
+        <div style={{ marginBottom: 'calc(var(--size) * 8)' }}>
+          <SearchBar 
+            value={searchTerm}
+            onChange={setSearchTerm}
+            placeholder="Buscar categorías..."
+          />
+        </div>
+
+        {/* Grid de categorías */}
+        {filteredCategorias.length > 0 ? (
+          <div className="g-layout g-layout--auto-fit-columns g-8">
+            {filteredCategorias.map(categoria => (
+              <Link 
+                key={categoria.id} 
+                to={`/categorias/${categoria.id}`}
+                style={{ textDecoration: 'none' }}
+              >
+                <article className="card">
+                  <div className="card__body d-flex f-direction-column a-items-center g-4 t-align-center">
+                    <span style={{ fontSize: '4rem' }}>{categoria.icono}</span>
+                    <h3 className="subtitle--xs">{categoria.nombre}</h3>
+                    <p className="text--sm c-secondary-text">
+                      {categoria.descripcion}
+                    </p>
+                    <span className="badge badge--primary interactive--sm">
+                      {categoria.total_cursos} cursos
+                    </span>
+                  </div>
+                </article>
+              </Link>
+            ))}
+          </div>
+        ) : (
+          <div className="t-align-center" style={{ padding: 'calc(var(--size) * 16) 0' }}>
+            <p className="text--lg c-secondary-text">
+              No se encontraron categorías
+            </p>
+          </div>
+        )}
+      </div>
+    </section>
+  );
+}

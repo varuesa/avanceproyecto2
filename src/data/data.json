@@ -1,0 +1,410 @@
+{
+  "cursos": [
+    {
+      "id": 1,
+      "titulo": "Desarrollo Web Full Stack",
+      "descripcion": "Aprende a crear aplicaciones web completas desde cero con las tecnologías más demandadas del mercado.",
+      "profesor_id": 1,
+      "categoria_id": 1,
+      "duracion": "12 semanas",
+      "nivel": "Intermedio",
+      "precio": 299,
+      "imagen": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&h=600&fit=crop",
+      "destacado": true,
+      "estudiantes": 1234,
+      "valoracion": 4.8
+    },
+    {
+      "id": 2,
+      "titulo": "React Avanzado y Patrones",
+      "descripcion": "Domina React con hooks avanzados, context API, optimización de rendimiento y patrones de diseño profesionales.",
+      "profesor_id": 2,
+      "categoria_id": 1,
+      "duracion": "8 semanas",
+      "nivel": "Avanzado",
+      "precio": 249,
+      "imagen": "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=800&h=600&fit=crop",
+      "destacado": true,
+      "estudiantes": 892,
+      "valoracion": 4.9
+    },
+    {
+      "id": 3,
+      "titulo": "Diseño UX/UI Profesional",
+      "descripcion": "Crea experiencias de usuario excepcionales aplicando principios de diseño centrado en el usuario.",
+      "profesor_id": 3,
+      "categoria_id": 2,
+      "duracion": "10 semanas",
+      "nivel": "Principiante",
+      "precio": 199,
+      "imagen": "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&h=600&fit=crop",
+      "destacado": true,
+      "estudiantes": 1567,
+      "valoracion": 4.7
+    },
+    {
+      "id": 4,
+      "titulo": "Python para Data Science",
+      "descripcion": "Aprende análisis de datos, visualización y machine learning con Python, NumPy, Pandas y Scikit-learn.",
+      "profesor_id": 4,
+      "categoria_id": 3,
+      "duracion": "14 semanas",
+      "nivel": "Intermedio",
+      "precio": 349,
+      "imagen": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800&h=600&fit=crop",
+      "destacado": false,
+      "estudiantes": 2103,
+      "valoracion": 4.9
+    },
+    {
+      "id": 5,
+      "titulo": "Marketing Digital Estratégico",
+      "descripcion": "Estrategias de marketing digital, SEO, SEM, redes sociales y analítica web para impulsar tu negocio.",
+      "profesor_id": 5,
+      "categoria_id": 4,
+      "duracion": "6 semanas",
+      "nivel": "Principiante",
+      "precio": 179,
+      "imagen": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop",
+      "destacado": false,
+      "estudiantes": 987,
+      "valoracion": 4.6
+    },
+    {
+      "id": 6,
+      "titulo": "Node.js y Express Backend",
+      "descripcion": "Construye APIs RESTful escalables con Node.js, Express, MongoDB y autenticación JWT.",
+      "profesor_id": 1,
+      "categoria_id": 1,
+      "duracion": "10 semanas",
+      "nivel": "Intermedio",
+      "precio": 279,
+      "imagen": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=600&fit=crop",
+      "destacado": false,
+      "estudiantes": 756,
+      "valoracion": 4.7
+    },
+    {
+      "id": 7,
+      "titulo": "Fotografía Digital desde Cero",
+      "descripcion": "Domina tu cámara, composición, iluminación y edición para crear fotografías profesionales.",
+      "profesor_id": 6,
+      "categoria_id": 5,
+      "duracion": "8 semanas",
+      "nivel": "Principiante",
+      "precio": 159,
+      "imagen": "https://images.unsplash.com/photo-1452587925148-ce544e77e70d?w=800&h=600&fit=crop",
+      "destacado": false,
+      "estudiantes": 1342,
+      "valoracion": 4.8
+    },
+    {
+      "id": 8,
+      "titulo": "Finanzas Personales Inteligentes",
+      "descripcion": "Aprende a gestionar tu dinero, invertir inteligentemente y alcanzar la libertad financiera.",
+      "profesor_id": 7,
+      "categoria_id": 6,
+      "duracion": "5 semanas",
+      "nivel": "Principiante",
+      "precio": 129,
+      "imagen": "https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=800&h=600&fit=crop",
+      "destacado": false,
+      "estudiantes": 2456,
+      "valoracion": 4.9
+    },
+    {
+      "id": 9,
+      "titulo": "Inglés de Negocios Avanzado",
+      "descripcion": "Perfecciona tu inglés profesional para presentaciones, negociaciones y comunicación corporativa.",
+      "profesor_id": 8,
+      "categoria_id": 7,
+      "duracion": "12 semanas",
+      "nivel": "Avanzado",
+      "precio": 219,
+      "imagen": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800&h=600&fit=crop",
+      "destacado": false,
+      "estudiantes": 1098,
+      "valoracion": 4.7
+    },
+    {
+      "id": 10,
+      "titulo": "Blockchain y Criptomonedas",
+      "descripcion": "Entiende la tecnología blockchain, smart contracts y el ecosistema de las criptomonedas.",
+      "profesor_id": 9,
+      "categoria_id": 3,
+      "duracion": "9 semanas",
+      "nivel": "Intermedio",
+      "precio": 329,
+      "imagen": "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=800&h=600&fit=crop",
+      "destacado": false,
+      "estudiantes": 634,
+      "valoracion": 4.6
+    },
+    {
+      "id": 11,
+      "titulo": "Ilustración Digital con Procreate",
+      "descripcion": "Crea ilustraciones digitales profesionales en iPad usando Procreate y técnicas avanzadas.",
+      "profesor_id": 10,
+      "categoria_id": 5,
+      "duracion": "7 semanas",
+      "nivel": "Intermedio",
+      "precio": 189,
+      "imagen": "https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=800&h=600&fit=crop",
+      "destacado": false,
+      "estudiantes": 891,
+      "valoracion": 4.8
+    },
+    {
+      "id": 12,
+      "titulo": "DevOps con Docker y Kubernetes",
+      "descripcion": "Automatiza deployments, orquesta contenedores y domina las prácticas DevOps modernas.",
+      "profesor_id": 2,
+      "categoria_id": 1,
+      "duracion": "11 semanas",
+      "nivel": "Avanzado",
+      "precio": 359,
+      "imagen": "https://images.unsplash.com/photo-1605745341112-85968b19335b?w=800&h=600&fit=crop",
+      "destacado": false,
+      "estudiantes": 542,
+      "valoracion": 4.9
+    },
+    {
+      "id": 13,
+      "titulo": "Copywriting Persuasivo",
+      "descripcion": "Escribe textos que venden aplicando técnicas de persuasión y neuromarketing.",
+      "profesor_id": 5,
+      "categoria_id": 4,
+      "duracion": "6 semanas",
+      "nivel": "Principiante",
+      "precio": 149,
+      "imagen": "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=800&h=600&fit=crop",
+      "destacado": false,
+      "estudiantes": 1234,
+      "valoracion": 4.7
+    },
+    {
+      "id": 14,
+      "titulo": "Machine Learning con TensorFlow",
+      "descripcion": "Construye modelos de inteligencia artificial y redes neuronales con TensorFlow y Keras.",
+      "profesor_id": 4,
+      "categoria_id": 3,
+      "duracion": "16 semanas",
+      "nivel": "Avanzado",
+      "precio": 399,
+      "imagen": "https://images.unsplash.com/photo-1555255707-c07966088b7b?w=800&h=600&fit=crop",
+      "destacado": false,
+      "estudiantes": 678,
+      "valoracion": 4.8
+    },
+    {
+      "id": 15,
+      "titulo": "Yoga y Meditación para Principiantes",
+      "descripcion": "Descubre el bienestar físico y mental a través del yoga y la meditación mindfulness.",
+      "profesor_id": 11,
+      "categoria_id": 8,
+      "duracion": "8 semanas",
+      "nivel": "Principiante",
+      "precio": 99,
+      "imagen": "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=800&h=600&fit=crop",
+      "destacado": false,
+      "estudiantes": 2789,
+      "valoracion": 4.9
+    }
+  ],
+  "profesores": [
+    {
+      "id": 1,
+      "nombre": "Carlos Mendoza",
+      "especialidad": "Desarrollo Web",
+      "bio": "Full Stack Developer con 10+ años de experiencia en desarrollo web. Ex-líder técnico en startups y empresas Fortune 500.",
+      "avatar": "https://i.pravatar.cc/300?img=12",
+      "estudiantes": 3456,
+      "cursos_dictados": 8,
+      "valoracion": 4.8
+    },
+    {
+      "id": 2,
+      "nombre": "Ana Rodríguez",
+      "especialidad": "React & Frontend",
+      "bio": "Senior Frontend Developer especializada en React. Google Developer Expert y speaker internacional en conferencias tech.",
+      "avatar": "https://i.pravatar.cc/300?img=45",
+      "estudiantes": 2890,
+      "cursos_dictados": 6,
+      "valoracion": 4.9
+    },
+    {
+      "id": 3,
+      "nombre": "Miguel Ángel Torres",
+      "especialidad": "Diseño UX/UI",
+      "bio": "Lead UX Designer con portfolio en Apple, Airbnb y startups unicornio. Apasionado por crear experiencias memorables.",
+      "avatar": "https://i.pravatar.cc/300?img=33",
+      "estudiantes": 4123,
+      "cursos_dictados": 5,
+      "valoracion": 4.7
+    },
+    {
+      "id": 4,
+      "nombre": "Laura Gómez",
+      "especialidad": "Data Science & AI",
+      "bio": "Data Scientist con PhD en Machine Learning. Investigadora y consultora para empresas del sector financiero y salud.",
+      "avatar": "https://i.pravatar.cc/300?img=48",
+      "estudiantes": 3567,
+      "cursos_dictados": 7,
+      "valoracion": 4.9
+    },
+    {
+      "id": 5,
+      "nombre": "Roberto Silva",
+      "especialidad": "Marketing Digital",
+      "bio": "Growth Hacker y estratega digital. Ha escalado +50 startups y gestionado campañas millonarias en Meta y Google Ads.",
+      "avatar": "https://i.pravatar.cc/300?img=15",
+      "estudiantes": 5678,
+      "cursos_dictados": 9,
+      "valoracion": 4.6
+    },
+    {
+      "id": 6,
+      "nombre": "Isabel Moreno",
+      "especialidad": "Fotografía",
+      "bio": "Fotógrafa profesional galardonada. Especializada en retratos y fotografía editorial para revistas internacionales.",
+      "avatar": "https://i.pravatar.cc/300?img=47",
+      "estudiantes": 2134,
+      "cursos_dictados": 4,
+      "valoracion": 4.8
+    },
+    {
+      "id": 7,
+      "nombre": "Javier Ramírez",
+      "especialidad": "Finanzas",
+      "bio": "Asesor financiero certificado CFP®. Ex-trader de Wall Street, ahora dedica su tiempo a educar en finanzas personales.",
+      "avatar": "https://i.pravatar.cc/300?img=52",
+      "estudiantes": 6789,
+      "cursos_dictados": 6,
+      "valoracion": 4.9
+    },
+    {
+      "id": 8,
+      "nombre": "Patricia Lee",
+      "especialidad": "Idiomas",
+      "bio": "Políglota certificada TEFL/TESOL. Vivió en 5 países y habla 6 idiomas. Especialista en inglés de negocios.",
+      "avatar": "https://i.pravatar.cc/300?img=44",
+      "estudiantes": 3421,
+      "cursos_dictados": 5,
+      "valoracion": 4.7
+    },
+    {
+      "id": 9,
+      "nombre": "David Chen",
+      "especialidad": "Blockchain",
+      "bio": "Blockchain architect y early adopter de Bitcoin. Co-fundador de una startup DeFi y auditor de smart contracts.",
+      "avatar": "https://i.pravatar.cc/300?img=68",
+      "estudiantes": 1890,
+      "cursos_dictados": 3,
+      "valoracion": 4.6
+    },
+    {
+      "id": 10,
+      "nombre": "Sofía Martínez",
+      "especialidad": "Arte Digital",
+      "bio": "Ilustradora y concept artist. Ha trabajado para estudios de animación y videojuegos AAA. Apple Distinguished Educator.",
+      "avatar": "https://i.pravatar.cc/300?img=49",
+      "estudiantes": 2567,
+      "cursos_dictados": 4,
+      "valoracion": 4.8
+    },
+    {
+      "id": 11,
+      "nombre": "Valentina Paz",
+      "especialidad": "Bienestar",
+      "bio": "Instructora de yoga certificada RYT-500. Terapeuta mindfulness y practicante con 15 años de experiencia.",
+      "avatar": "https://i.pravatar.cc/300?img=43",
+      "estudiantes": 4321,
+      "cursos_dictados": 3,
+      "valoracion": 4.9
+    }
+  ],
+  "categorias": [
+    {
+      "id": 1,
+      "nombre": "Programación",
+      "descripcion": "Desarrollo web, aplicaciones móviles y software",
+      "icono": "💻",
+      "total_cursos": 6
+    },
+    {
+      "id": 2,
+      "nombre": "Diseño",
+      "descripcion": "UX/UI, diseño gráfico y creativo",
+      "icono": "🎨",
+      "total_cursos": 1
+    },
+    {
+      "id": 3,
+      "nombre": "Data & IA",
+      "descripcion": "Ciencia de datos, machine learning e inteligencia artificial",
+      "icono": "🤖",
+      "total_cursos": 3
+    },
+    {
+      "id": 4,
+      "nombre": "Marketing",
+      "descripcion": "Marketing digital, redes sociales y ventas",
+      "icono": "📈",
+      "total_cursos": 2
+    },
+    {
+      "id": 5,
+      "nombre": "Arte",
+      "descripcion": "Fotografía, ilustración y medios audiovisuales",
+      "icono": "📸",
+      "total_cursos": 2
+    },
+    {
+      "id": 6,
+      "nombre": "Negocios",
+      "descripcion": "Finanzas, emprendimiento y gestión empresarial",
+      "icono": "💼",
+      "total_cursos": 1
+    },
+    {
+      "id": 7,
+      "nombre": "Idiomas",
+      "descripcion": "Inglés, español y otros idiomas",
+      "icono": "🌐",
+      "total_cursos": 1
+    },
+    {
+      "id": 8,
+      "nombre": "Estilo de Vida",
+      "descripcion": "Salud, bienestar y desarrollo personal",
+      "icono": "🧘",
+      "total_cursos": 1
+    }
+  ],
+  "testimonios": [
+    {
+      "id": 1,
+      "nombre": "María González",
+      "curso": "Desarrollo Web Full Stack",
+      "comentario": "Increíble curso que me ayudó a cambiar de carrera. En 3 meses conseguí mi primer trabajo como developer.",
+      "valoracion": 5,
+      "avatar": "https://i.pravatar.cc/150?img=23"
+    },
+    {
+      "id": 2,
+      "nombre": "Pedro Sánchez",
+      "curso": "Marketing Digital Estratégico",
+      "comentario": "Aprendí estrategias que apliqué inmediatamente en mi negocio. Las ventas aumentaron un 150%.",
+      "valoracion": 5,
+      "avatar": "https://i.pravatar.cc/150?img=59"
+    },
+    {
+      "id": 3,
+      "nombre": "Lucía Fernández",
+      "curso": "Diseño UX/UI Profesional",
+      "comentario": "Profesores excepcionales y contenido actualizado. Ahora trabajo para una startup internacional.",
+      "valoracion": 5,
+      "avatar": "https://i.pravatar.cc/150?img=31"
+    }
+  ]
+}

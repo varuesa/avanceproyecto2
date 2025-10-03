@@ -1,6 +1,9 @@
 import { Link, NavLink } from "react-router";
+import { useAppContext } from "../../context/AppContext";
 
 const Header = () => {
+ const { favoritos, misCursos } = useAppContext();
+
   return (
     <header className="header">
       <nav className="nav nav--scroll">
@@ -52,9 +55,28 @@ const Header = () => {
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink className="link interactive" to="/miscursos">
-                    Mis Cursos
+                  <NavLink className="link interactive"  style={{ position: 'relative', display: 'inline-flex', alignItems: 'center', gap: '8px' }} to="/miscursos">
+                    Mis Cursos   
+ {favoritos.length > 0 && (
+    <span style={{
+      position: 'relative',
+      display: 'inline-flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      minWidth: '20px',
+      height: '20px',
+      padding: '0 6px',
+      borderRadius: '10px',
+      backgroundColor: 'var(--primary-color)',
+      color: 'var(--light-primary-text)',
+      fontSize: '12px',
+      fontWeight: '700'
+    }}>
+      {favoritos.length}
+    </span>
+  )}
                   </NavLink>
+
                 </li>
               </ul>
             </div>
