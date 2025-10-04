@@ -1,26 +1,67 @@
-import { useState } from 'react';
+
+import { useState, useEffect } from 'react';
 import { useAppContext } from '../context/AppContext';
 import Card from '../components/ui/Card';
 import SearchBar from '../components/ui/SearchBar';
-import Pagination from '../components/ui/Pagination';
+
 
 export default function Cursos() {
   const { cursos } = useAppContext();
   const [searchTerm, setSearchTerm] = useState('');
-  const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 10;
+    const [delayedSearch, setDelayedSearch] = useState('');
 
-  // Filtrar cursos
+    // scrooll 10 cuross
+    const [visibleCount, setVisibleCount] = useState(10);
+  const [hasMore, setHasMore] = useState(true);
+
+    // Delay de 4 segundos (debounce)
+  useEffect(() => {
+    const delay = setTimeout(() => {
+      setDelayedSearch(searchTerm);
+    }, 1000);
+
+    return () => clearTimeout(delay);
+  }, [searchTerm]);
+
+
+  // Filtrar cursos según el término con delay
   const filteredCursos = cursos.filter(curso =>
-    curso.titulo.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    curso.descripcion.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    curso.nivel.toLowerCase().includes(searchTerm.toLowerCase())
+    curso.titulo.toLowerCase().includes(delayedSearch.toLowerCase()) ||
+    curso.descripcion.toLowerCase().includes(delayedSearch.toLowerCase()) ||
+    curso.nivel.toLowerCase().includes(delayedSearch.toLowerCase())
   );
 
-  // Paginación
-  const totalPages = Math.ceil(filteredCursos.length / itemsPerPage);
-  const startIndex = (currentPage - 1) * itemsPerPage;
-  const currentCursos = filteredCursos.slice(startIndex, startIndex + itemsPerPage);
+
+// scrooll 10 cuross
+  const visibleCursos = filteredCursos.slice(0, visibleCount);
+  useEffect(() => {
+    const handleScroll = () => {
+      const bottomReached =
+        window.innerHeight + window.scrollY >= document.body.offsetHeight - 100;
+
+      if (bottomReached && hasMore) {
+        if (visibleCount < filteredCursos.length) {
+          setVisibleCount(prev => prev + 10);
+        } else {
+          setHasMore(false); // Ya no hay más cursos
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [filteredCursos.length, visibleCount, hasMore]);
+
+  // Reiniciar cuando cambia la búsqueda
+  useEffect(() => {
+    setVisibleCount(10);
+    setHasMore(true);
+  }, [delayedSearch]);
+
+
+
+
+
 
   return (
     <section className="section">
@@ -42,23 +83,24 @@ export default function Cursos() {
         </div>
 
         {/* Resultados */}
-        {currentCursos.length > 0 ? (
+        {visibleCursos.length > 0 ? (
           <>
             <div className="g-layout g-layout--auto-fit-columns g-8" style={{ marginBottom: 'calc(var(--size) * 8)' }}>
-              {currentCursos.map(curso => (
+              {visibleCursos.map(curso => (
                 <Card key={curso.id} curso={curso} />
               ))}
             </div>
 
-            {/* Paginación */}
-            {totalPages > 1 && (
-              <Pagination 
-                currentPage={currentPage}
-                totalPages={totalPages}
-                onPageChange={setCurrentPage}
-              />
-            )}
+
+           {/* Mensaje inferior según el estado */}
+            <p className="text--sm c-secondary-text t-align-center" style={{ marginBottom: 'calc(var(--size) * 6)' }}>
+              {hasMore
+                ? 'Desplázate hacia abajo para ver más...'
+                : 'No hay más cursos por mostrar'}
+            </p>
           </>
+          
+          
         ) : (
           <div className="t-align-center" style={{ padding: 'calc(var(--size) * 16) 0' }}>
             <p className="text--lg c-secondary-text">

@@ -3,8 +3,10 @@ import data from '../data/data.json';
 
 const AppContext = createContext();
 
-export const useAppContext = () => {
-  const context = useContext (AppContext);
+export const useAppContext = () => 
+  
+  {
+  const context = useContext(AppContext);
   if (!context) {
     throw new Error('useAppContext debe usarse dentro de AppProvider');
   }
@@ -29,8 +31,6 @@ export const AppProvider = ({ children }) => {
     return saved ? JSON.parse(saved) : [];
   });
 
-  // Estado de toasts
-  const [toast, setToast] = useState(null);
 
   // Persistir favoritos
   useEffect(() => {
@@ -41,6 +41,11 @@ export const AppProvider = ({ children }) => {
   useEffect(() => {
     localStorage.setItem('misCursos', JSON.stringify(misCursos));
   }, [misCursos]);
+
+
+
+
+
 
   // Funciones de favoritos
   const toggleFavorito = (cursoId) => {
@@ -110,17 +115,21 @@ export const AppProvider = ({ children }) => {
     return cursos.filter(curso => misCursos.includes(curso.id));
   };
 
+  // Estado de toasts
+  const [toast, setToast] = useState(null);
+
+
   const value = {
     // Datos
     cursos,
     profesores,
     categorias,
     testimonios,
-    
+
     // Estados de usuario
     favoritos,
     misCursos,
-    
+
     // Funciones
     toggleFavorito,
     isFavorito,
@@ -133,7 +142,7 @@ export const AppProvider = ({ children }) => {
     getCursosByProfesor,
     getCursosFavoritos,
     getMisCursosInscritos,
-    
+
     // Toast
     toast
   };

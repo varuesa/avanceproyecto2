@@ -51,30 +51,17 @@ const Header = () => {
                 </li>
                 <li>
                   <NavLink className="link interactive" to="/favoritos">
-                    Favoritos
+                   ❤️ Favoritos {favoritos.length > 0 && (
+              <span className="badge badge--primary"> {favoritos.length} </span>
+            )}
                   </NavLink>
                 </li>
                 <li>
                   <NavLink className="link interactive"  style={{ position: 'relative', display: 'inline-flex', alignItems: 'center', gap: '8px' }} to="/miscursos">
-                    Mis Cursos   
- {favoritos.length > 0 && (
-    <span style={{
-      position: 'relative',
-      display: 'inline-flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-      minWidth: '20px',
-      height: '20px',
-      padding: '0 6px',
-      borderRadius: '10px',
-      backgroundColor: 'var(--primary-color)',
-      color: 'var(--light-primary-text)',
-      fontSize: '12px',
-      fontWeight: '700'
-    }}>
-      {favoritos.length}
-    </span>
-  )}
+                   📘 Mis Cursos   
+{misCursos.length > 0 && (
+              <span className="badge badge--primary"> {misCursos.length} </span>
+            )}
                   </NavLink>
 
                 </li>

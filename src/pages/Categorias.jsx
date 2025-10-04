@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { useAppContext } from '../context/AppContext';
 import Card from '../components/ui/Card';
 import SearchBar from '../components/ui/SearchBar';
-import Pagination from '../components/ui/Pagination';
+
 import Breadcrumbs from '../components/layout/Breadcrumbs';
 import { Link, useParams } from 'react-router';
 
@@ -11,8 +11,7 @@ export default function Categorias() {
   const { id } = useParams();
   const { categorias, getCursosByCategoria } = useAppContext();
   const [searchTerm, setSearchTerm] = useState('');
-  const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 10;
+
 
   // Si hay ID, mostrar cursos de esa categoría
   if (id) {
@@ -25,10 +24,7 @@ export default function Categorias() {
       curso.descripcion.toLowerCase().includes(searchTerm.toLowerCase())
     );
 
-    // Paginación
-    const totalPages = Math.ceil(filteredCursos.length / itemsPerPage);
-    const startIndex = (currentPage - 1) * itemsPerPage;
-    const currentCursos = filteredCursos.slice(startIndex, startIndex + itemsPerPage);
+
 
     return (
       <section className="section">
@@ -56,21 +52,15 @@ export default function Categorias() {
           </div>
 
           {/* Cursos */}
-          {currentCursos.length > 0 ? (
+          {filteredCursos.length > 0 ? (
             <>
               <div className="g-layout g-layout--auto-fit-columns g-8" style={{ marginBottom: 'calc(var(--size) * 8)' }}>
-                {currentCursos.map(curso => (
+                {filteredCursos.map(curso => (
                   <Card key={curso.id} curso={curso} />
                 ))}
               </div>
 
-              {totalPages > 1 && (
-                <Pagination 
-                  currentPage={currentPage}
-                  totalPages={totalPages}
-                  onPageChange={setCurrentPage}
-                />
-              )}
+
             </>
           ) : (
             <div className="t-align-center" style={{ padding: 'calc(var(--size) * 16) 0' }}>

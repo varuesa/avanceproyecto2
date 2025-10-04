@@ -52,7 +52,7 @@
       "nivel": "Intermedio",
       "precio": 349,
       "imagen": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800&h=600&fit=crop",
-      "destacado": false,
+      "destacado": true,
       "estudiantes": 2103,
       "valoracion": 4.9
     },
@@ -66,7 +66,7 @@
       "nivel": "Principiante",
       "precio": 179,
       "imagen": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop",
-      "destacado": false,
+      "destacado": true,
       "estudiantes": 987,
       "valoracion": 4.6
     },
@@ -210,6 +210,21 @@
       "estudiantes": 2789,
       "valoracion": 4.9
     }
+    ,
+    {
+      "id": 16,
+      "titulo": "React ",
+      "descripcion": "Descubre el bienestar físico y mental a través del yoga y la meditación mindfulness.",
+      "profesor_id": 11,
+      "categoria_id": 8,
+      "duracion": "8 semanas",
+      "nivel": "Principiante",
+      "precio": 99,
+      "imagen": "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=800&h=600&fit=crop",
+      "destacado": false,
+      "estudiantes": 2789,
+      "valoracion": 4.9
+    }
   ],
   "profesores": [
     {
@@ -315,6 +330,16 @@
     {
       "id": 11,
       "nombre": "Valentina Paz",
+      "especialidad": "Bienestar",
+      "bio": "Instructora de yoga certificada RYT-500. Terapeuta mindfulness y practicante con 15 años de experiencia.",
+      "avatar": "https://i.pravatar.cc/300?img=43",
+      "estudiantes": 4321,
+      "cursos_dictados": 3,
+      "valoracion": 4.9
+    },
+    {
+      "id": 12,
+      "nombre": "Vale",
       "especialidad": "Bienestar",
       "bio": "Instructora de yoga certificada RYT-500. Terapeuta mindfulness y practicante con 15 años de experiencia.",
       "avatar": "https://i.pravatar.cc/300?img=43",
