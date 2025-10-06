@@ -39,7 +39,7 @@ export default function Profesores() {
         {/* Resultados */}
         {filteredProfesores.length > 0 ? (
           <>
-            <div className="g-layout g-layout--auto-fit-columns g-8" style={{ marginBottom: 'calc(var(--size) * 8)' }}>
+            <div className="g-layout g-layout--auto-fit-columns g-8 " style={{ marginBottom: 'calc(var(--size) * 8)' }}>
               {filteredProfesores.map(profesor => (
                 <Card key={profesor.id} profesor={profesor} />
               ))}

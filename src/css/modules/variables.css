@@ -4,7 +4,7 @@
   --primary-color: #23B5E8;
   --secondary-color: #234B96;
   --warning-color: #E8B523;
-  --black-color: #010508;
+  --black-color: #030f18;
   --white-color: #FEFEFE;
 
 
@@ -31,5 +31,7 @@
 
   @media (width >=768px) {
     --size: 0.25rem;
+
+    
   }
 }

@@ -41,14 +41,14 @@ export default function Card({ curso, profesor }) {
 
     if (profesor) {
         return (
-            <article className="card">
+            <div className="card">
                 <div className="card__body d-flex f-direction-column a-items-center g-4">
                     <img
                         src={profesor.avatar}
                         alt={profesor.nombre}
                         style={{
-                            width: '120px',
-                            height: '120px',
+                            width: '100px',
+                            height: '100px',
                             borderRadius: '50%',
                             objectFit: 'cover',
                             border: '4px solid var(--primary-color)'
@@ -83,7 +83,7 @@ export default function Card({ curso, profesor }) {
                         Ver perfil
                     </Link>
                 </div>
-            </article>
+            </div>
         );
     }
 

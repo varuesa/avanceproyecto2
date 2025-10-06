@@ -129,6 +129,7 @@
 }
 
 .section {
+  
   padding-block: calc(var(--size) * 16);
 }
 

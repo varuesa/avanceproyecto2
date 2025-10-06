@@ -1,10 +1,15 @@
 import { useState, useEffect, useRef } from 'react';
 
-function AnimatedCounter({ end, duration = 2000, label, icon }) {
-  const [count, setCount] = useState(0);
-  const [isVisible, setIsVisible] = useState(false);
-  const ref = useRef(null);
+// Componente para animar el contador cuando entra en viewport 
 
+function AnimatedCounter({ end, duration = 2000, label, icon }) {
+  // Estado para el conteo y visibilidad
+  const [count, setCount] = useState(0);
+  // Estado para el conteo y visibilidad
+  const [isVisible, setIsVisible] = useState(false);
+  // Referencia al elemento para el Intersection Observer
+  const ref = useRef(null);
+// Referencia al elemento para el Intersection Observer 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -49,7 +54,7 @@ function AnimatedCounter({ end, duration = 2000, label, icon }) {
   }, [isVisible, end, duration]);
 
   return (
-    <div ref={ref} className="d-flex f-direction-column a-items-center g-2">
+    <div ref={ref} className="d-flex f-direction-column a-items-center g-2 " style={{ border: '1px dashed var(--primary-color)' , padding: 'calc(var(--size) * 4)', borderRadius: '8px' }}>
       <span className="title c-primary">{icon}</span>
       <h3 className="title--sm c-primary">
         {count.toLocaleString()}+
@@ -63,7 +68,7 @@ export default function StatsCounter({ cursos, profesores }) {
   const totalEstudiantes = cursos.reduce((sum, curso) => sum + curso.estudiantes, 0);
 
   return (
-    <div className="g-layout g-layout--auto-fit-columns g-8">
+    <div className="g-layout g-layout--auto-fit-columns g-8" >
       <AnimatedCounter 
         end={cursos.length} 
         label="Cursos disponibles"

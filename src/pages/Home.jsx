@@ -24,8 +24,11 @@ export default function Home() {
 
        {/* Contadores */}
       <section className="section">
-        <div className="container">
+        <div className="container ">
+          <div className="" >
           <StatsCounter cursos={cursos} profesores={profesores} />
+          </div >
+         
         </div>
       </section>
 
