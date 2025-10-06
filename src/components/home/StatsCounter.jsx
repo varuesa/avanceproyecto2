@@ -54,7 +54,7 @@ function AnimatedCounter({ end, duration = 2000, label, icon }) {
   }, [isVisible, end, duration]);
 
   return (
-    <div ref={ref} className="d-flex f-direction-column a-items-center g-2 " style={{ border: '1px dashed var(--primary-color)' , padding: 'calc(var(--size) * 4)', borderRadius: '8px' }}>
+    <div ref={ref} className="d-flex f-direction-column a-items-center g-2 " style={{ border: '1px dashed var(--shadow)' , padding: 'calc(var(--size) * 4)', borderRadius: '8px' }}>
       <span className="title c-primary">{icon}</span>
       <h3 className="title--sm c-primary">
         {count.toLocaleString()}+

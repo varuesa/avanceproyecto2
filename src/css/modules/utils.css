@@ -118,6 +118,11 @@
   text-align: center;
 }
 
+.alignItems-center {
+  align-items : center;
+  
+}
+
 @media (width >=768px) {
   .md\:d-none {
     display: none;

@@ -42,7 +42,7 @@ export default function Home() {
             </Link>
           </div>
           
-          <div className="g-layout g-layout--auto-fit-columns g-8">
+          <div className="g-layout cols-3 g-8">
             {profesores.slice(0, 3).map(profesor => (
               <Card key={profesor.id} profesor={profesor} />
             ))}
@@ -60,7 +60,7 @@ export default function Home() {
             </Link>
           </div>
           
-          <div className="g-layout g-layout--auto-fit-columns g-8">
+          <div className="g-layout cols-3 g-8">
             {cursos.slice(0, 3).map(curso => (
               <Card key={curso.id} curso={curso} />
             ))}
@@ -78,7 +78,7 @@ export default function Home() {
             </Link>
           </div>
           
-          <div className="g-layout g-layout--auto-fit-columns g-8">
+          <div className="g-layout cols-3 g-8">
             {categorias.slice(0, 3).map(categoria => (
               <Link 
                 key={categoria.id} 

@@ -145,10 +145,17 @@
   box-shadow: calc(var(--size) * 0.0625) calc(var(--size) * 0.125) var(--size) calc(var(--size) * 0.0625) var(--primary-card-color);
   overflow: hidden;
   transition: box-shadow var(--transition-duration), transform var(--transition-duration);
-
+  padding: 16px;
+  display: flex;
+ 
+  flex-direction: column;
+  align-items: start;
+  justify-items: center ;
+  
   &:hover {
     --primary-card-color: var(--primary-color);
     transform: scale(1.025);
+    
   }
 }
 
