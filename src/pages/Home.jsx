@@ -35,7 +35,7 @@ export default function Home() {
             {/* Profesores Destacados */}
       <section className="section">
         <div className="container">
-          <div className="d-flex j-content-between a-items-center" style={{ marginBottom: 'calc(var(--size) * 8)' }}>
+          <div className="d-flex j-content-between a-items-center" >
             <h2 className="title--sm">👨‍🏫 Profesores Destacados</h2>
             <Link to="/profesores" className="button button--outline-primary interactive">
               Ver todos →
@@ -53,7 +53,7 @@ export default function Home() {
             {/* Cursos Populares */}
       <section className="section">
         <div className="container">
-          <div className="d-flex j-content-between a-items-center" style={{ marginBottom: 'calc(var(--size) * 8)' }}>
+          <div className="d-flex j-content-between a-items-center" >
             <h2 className="title--sm">📚 Cursos Populares</h2>
             <Link to="/cursos" className="button button--outline-primary interactive">
               Ver todos →
@@ -71,7 +71,7 @@ export default function Home() {
        {/* Categorías */}
       <section className="section">
         <div className="container">
-          <div className="d-flex j-content-between a-items-center" style={{ marginBottom: 'calc(var(--size) * 8)' }}>
+          <div className="d-flex j-content-between a-items-center" >
             <h2 className="title--sm">🗂️ Explora por Categoría</h2>
             <Link to="/categorias" className="button button--outline-primary interactive">
               Ver todas →
@@ -106,7 +106,7 @@ export default function Home() {
        {/* Testimonios */}
       <section className="section">
         <div className="container">
-          <h2 className="title--sm t-align-center" style={{ marginBottom: 'calc(var(--size) * 8)' }}>
+          <h2 className="title--sm t-align-center" >
             💬 Lo que dicen nuestros estudiantes
           </h2>
           <Testimonials testimonios={testimonios} />

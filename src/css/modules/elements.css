@@ -186,7 +186,7 @@
   border-radius: calc(var(--size) * 2);
   background-color: var(--primary-badge-color);
   color: var(--primary-badge-text);
-  border: 2px solid #fff;
+  border: 2px solid var(--primary-color);
  
 
   

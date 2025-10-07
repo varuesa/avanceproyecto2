@@ -45,6 +45,9 @@
 .j-content-between {
   justify-content: space-between;
 }
+.j-content-around {
+  justify-content: space-around;
+}
 
 .f-wrap {
   flex-wrap: wrap;

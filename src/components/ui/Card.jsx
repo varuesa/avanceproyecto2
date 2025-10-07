@@ -26,12 +26,14 @@ export default function Card({ curso, profesor }) {
               ${curso.precio}
             </span>
           </div>
+          <div className="d-flex j-content-center card__body1" style={{/* border: '2px solid purple', */ }}>
           <Link
             to={`/cursos/${curso.id}`}
             className="button button--primary interactive--sm"
           >
             Ver detalles
           </Link>
+          </div>
         </div>
       </article>
     );
@@ -40,7 +42,7 @@ export default function Card({ curso, profesor }) {
   if (profesor) {
     return (
       <div className="card">
-        <div style={{display:'flex', gap:12, alignItems:'center', border: '1px solid #fff'}}>
+        <div className="card__body1" style={{ display: 'flex'/* border: '2px solid red' , */ }}>
           <img
             src={profesor.avatar}
             alt={profesor.nombre}
@@ -52,40 +54,37 @@ export default function Card({ curso, profesor }) {
               border: "4px solid var(--primary-color)"
             }}
           />
-          <div className="" style={{border: '1px solid #fff', padding: '10px'}}>
+          <div className="" style={{/* border: '2px solid green', */  width: '100%' }}>
             <h3 className="subtitle--xs t-align-center">{profesor.nombre}</h3>
-            {/* especialidad centrado horizontalmente */}
-            <div className="d-flex g-4  " style={{border: '1px solid #fff', padding: '10px'}}>
-            <span className="badge badge--primary interactive--sm " >
-                    {profesor.especialidad}
-             </span>
-            </div>
-            
-              
-           
 
-            <div className="d-flex g-4 j-content-center a-items-center" style={{border: '1px solid #fff', padding: '10px'}}>
-              <div>
-                <p className="text--xs c-secondary-text" style={{ margin: 0 }}>
+            {/* especialidad centrado horizontalmente */}
+            <div className="d-flex j-content-center" style={{/* border: '2px solid yellow', */ paddingBlock: '6px' }}>
+              <span className="badge badge--primary interactive--sm " >
+                {profesor.especialidad}
+              </span>
+            </div>
+            <div className="d-flex g-4 j-content-around" style={{/* border: '2px solid blue', */ padding: '10px' }}>
+              <div className="">
+                <p className="text--xs c-secondary-text t-align-center " style={{ margin: 0 }}>
                   Estudiantes
                 </p>
-                <p className="interactive--sm c-primary" style={{ margin: 0 }}>
+                <p className="interactive--sm c-primary t-align-center" style={{ margin: 0 }}>
                   {profesor.estudiantes.toLocaleString()}
                 </p>
               </div>
               <div>
-                <p className="text--xs c-secondary-text" style={{ margin: 0 }}>
+                <p className="text--xs c-secondary-text t-align-center" style={{ margin: 0 }}>
                   Cursos
                 </p>
-                <p className="interactive--sm c-primary" style={{ margin: 0 }}>
+                <p className="interactive--sm c-primary t-align-center" style={{ margin: 0 }}>
                   {profesor.cursos_dictados}
                 </p>
               </div>
             </div>
           </div>
         </div>
-        <p
-          className="text--sm c-secondary-text t-align-center"
+        <div
+          className="card__body1 text--sm c-secondary-text t-align-center"
           style={{
             display: "-webkit-box",
             WebkitLineClamp: 2,
@@ -94,8 +93,8 @@ export default function Card({ curso, profesor }) {
           }}
         >
           {profesor.bio}
-        </p>
-        <div className="d-flex j-content-center">
+        </div>
+        <div className="d-flex j-content-center card__body1" style={{/* border: '2px solid purple', */ }}>
           <Link
             to={`/profesores/${profesor.id}`}
             className=" button button--primary interactive--sm "
