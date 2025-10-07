@@ -1,6 +1,6 @@
 import { NavLink } from "react-router";
 // import logo from "/react.svg";
-import logo from "../../assets/react.svg";
+import logo from "../../../public/react.svg";
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
