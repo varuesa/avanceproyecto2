@@ -1,5 +1,6 @@
 import { NavLink } from "react-router";
-
+// import logo from "/react.svg";
+import logo from "../../assets/react.svg";
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
@@ -8,7 +9,7 @@ const Footer = () => {
       <nav className="nav">
         <div className="container g-layout g-layout--auto-fit-columns g-10">
           <div className="d-flex f-direction-column g-2">
-            <a href="#"><img src="/react.svg" alt="CursoTech Store Logo" width="32" height="32" className="img img--logo" /></a>
+            <a href="#"><img src={logo} alt="CursoTech Store Logo" width="32" height="32" className="img img--logo" /></a>
             <h2 className="interactive interactive--lg c-primary">CursoTech Store</h2>
             <p className="text text--xs c-secondary-text">
               CursoTech Store es una plataforma divertida y tecnológica donde encuentras cursos, profesores, te inscribes fácil y guardas tus favoritos.
